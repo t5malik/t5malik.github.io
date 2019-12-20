@@ -583,8 +583,10 @@ body:after {
         .site-blocks-cover.overlay:before {
           background: rgba(255, 255, 255, 0.5); } }
   .site-blocks-cover, .site-blocks-cover > .container, .site-blocks-cover > .container > .row {
-    min-height: 600px;
-    height: 100vh; }
+    position: relative;
+	ext-align: center;
+	color: white;
+	}
   .site-blocks-cover .text-intro {
     position: relative;
     z-index: 2; }
@@ -600,6 +602,21 @@ body:after {
     @media (max-width: 991.98px) {
       .site-blocks-cover .img-face {
         right: -25%; } }
+
+.introLandscapeContainter {
+  position: relative;
+  text-align: center;
+  color: white;
+}		
+
+.introLandscapeCentered {
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translate(-50%, -33%);
+}
+
+
 
 .section-title {
   position: relative;
