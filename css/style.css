@@ -583,10 +583,8 @@ body:after {
         .site-blocks-cover.overlay:before {
           background: rgba(255, 255, 255, 0.5); } }
   .site-blocks-cover, .site-blocks-cover > .container, .site-blocks-cover > .container > .row {
-    position: relative;
-	ext-align: center;
-	color: white;
-	}
+    min-height: 200px;
+    height:65vh; }
   .site-blocks-cover .text-intro {
     position: relative;
     z-index: 2; }
