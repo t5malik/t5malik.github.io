@@ -609,9 +609,9 @@ body:after {
 
 .introLandscapeCentered {
   position: absolute;
-  top: 33%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -33%);
+  transform: translate(-50%, -50%);
 }
 
 
