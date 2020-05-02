@@ -62,64 +62,47 @@
       <div class="container">
         <div class="row ">
           <div class="col-12 mb-4 position-relative">
-            <h2 class="section-title">Custom 3D Printer</h2>
+            <h2 class="section-title">Stewart Platform</h2>
           </div>
           
 		  <div class="col-lg-12 order-1 order-lg-1">
-            <p>3D printing and other maker technologies have always been an interest of mine, and as a side project I decided to build my own 3D printer. The model is based off the Tevo Tarantula, with many custom upgrades.</p>          
+            <p>A Stewart Platform is essentially a platform that can move in 6 degrees of freedom in XYZ, Yaw, Pitch, and Roll. Common applications for such devices can be found in any scenario where orientation and balance are important, such as stabilization modules for cameras.</p> 
+              
+            <p>The platform was constructed as part of the ME380 course. The platform is controled by 6 servo motors attached via ball joints in order to actuate platform motion. A rigorous set of inverse kinematics was completed in order to convert some input (XYZYPR) and convert that value to an output servo angle. When all 6 servo motors work in conjunction, the system can be viewed as 6 4-bar linkage systems.</p>
+              
+            <p>This specific platform features a remote input method by using a MPU-6050 accelerometer/gyroscope module and nRF24L01 RF Transiever which converts the users hand position into integar values. These values are then sent wirelessly to the platform where the control block converts the input to the servo angles. As an added challenge, the platform had to be able to solve a pre-determined maze by moving a marble from start to finish.</p>
+              
 		</div>
 		
-		<div class="col-lg-6 order-2 order-lg-2">
-			<img src="images/printer_complete.jpg" alt="Image" class="img-fluid">
+		<div class="col-lg-4 order-2 order-lg-2">
+				<img src="images/platform_cad.jpg" alt="Image" class="img-fluid"> 
 		</div>
 		
-		<div class="col-lg-6 order-3 order-lg-3">
-			<p>The image on the left is the entire printer which has a build volume of 200x200x220mm. The overall part accuracy is +/- 0.1mm depending on the part and application. 
-			I have used this printer for personal and school projects ranging from RC vehicles, to custom lithophanes, and many other mechanical assemblies. The printer was constructed 
-			by re-modelling an existing 3D printer and with the help of a very active 3D printing community I was able to get my printer fully functional. Below are some examples 
-			of things I have 3D printed.
-			</p>
+		<div class="col-lg-8 order-3 order-lg-3">
+				<p>Firstly, the inverse kinematics were completed using variables only. Once simplified, assumptions were made to determine the sizes for the base, servo arm, and other fixed values. This was then modelled in CAD software and tolerance, force, and collision analysis were completed to ensure proprt fit/function of the design.</p>
 		</div>
 		
 		<div class="col-lg-4 order-4 order-lg-4">
-			<p></p>
-			<img src="images/uke.jpg" alt="Image" class="img-fluid">
+            <p> </p>
+            <p>Afterwards, the electronc components were then selected and configured. Two Arduino units were used, one as the sender and on as the reciever. Code was written to communicate the input values between these devices and after thorough prototyping, the final design was created (as shown on the right). The primary goal for this design was to allow users who may have limited motor function to still use this device while providing an intuitive and fun control method. This design could also be used as a potential therapy activity where the user can visually see progress of their hand/wrist giving them motivation and encouragement to continue progress.</p>
 		</div>
-		
-		<div class="col-lg-4 order-5 order-lg-5">
-			<p></p>
-			<img src="images/custom_nightlight.jpg" alt="Image" class="img-fluid">
-		</div>
-		
-		<div class="col-lg-4 order-6 order-lg-6">
-			<p></p>
-			<img src="images/dual_freewheel_adapter.jpg" alt="Image" class="img-fluid">
-		</div>
-		
-		<div class="col-lg-4 order-7 order-lg-7">
-			<p></p>
-			<img src="images/motor_adapter.jpg" alt="Image" class="img-fluid">
-		</div>
-		
-		<div class="col-lg-4 order-8 order-lg-8">
-			<p></p>
-			<img src="images/cube_arm.JPG" alt="Image" class="img-fluid">
-		</div>
-		
-		<div class="col-lg-4 order-9 order-lg-9">
-			<p></p>
-			<img src="images/quickreturn_mechanism.jpg" alt="Image" class="img-fluid">
+        
+        <div class="col-lg-8 order-4 order-lg-5">
+            <p> </p>
+				<img src="images/final_platform.jpg" alt="Image" class="img-fluid"> 
 		</div>
             
-        <div class="col-lg-6 order-10 order-lg-10">
-			<p></p>
-			<img src="images/servo_arm_iteration.jpg" alt="Image" class="img-fluid">
+        
+        <div class="col-lg-6 order-4 order-lg-6">
+            <p> </p>
+				<img src="images/platform_construction.jpg" alt="Image" class="img-fluid"> 
 		</div>
-            
-        <div class="col-lg-6 order-11 order-lg-11">
-			<p></p>
-			<img src="images/inProgress_print.jpg" alt="Image" class="img-fluid">
-		</div>    
+        
+            <div class="col-lg-6 order-4 order-lg-7">
+            <p> </p>
+				<img src="images/servo_arm.jpg" alt="Image" class="img-fluid"> 
+		</div>
+		  
           
         </div>
       </div>
